@@ -1,0 +1,1035 @@
+
+//Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nova+Mono&display=swap');
+$base-font-family: 'Montserrat Alternates', sans-serif;
+$alternate-font-family: 'Nova Mono', monospace;
+
+// Color variables
+
+$page-gray: #808080;
+$page-gray-light:#BBBBBE;//BBBBBE
+$page-gray-dark:#475762;//2E383F
+$page-pink: #debc49;
+$page-pink-light: #D70B8C;
+$bg-pink: #9E6897;
+$page-blue: #005a80;
+$page-blue-light: #056789;
+$page-blue-lighter: #1794b4;
+$text-dark: #1B1A17;
+$text-white: #ffffff;
+$text-black: #000000;
+$page-yellow:#F0A500;//FFE21F
+$page-yellow-darker:#c88f1c;//FFEE74
+$page-yellow-light:#debc49;//ecd94f
+$page-green:#004d4d;
+$page-aquamarine:#52baae;
+
+// Media Query Ranges
+
+$xxsmall-breakpoint: 320px;
+$xsmall-breakpoint: 400px;
+$small-breakpoint: 480px;
+$medium-breakpoint: 600px;
+$large-breakpoint: 768px;
+$xlarge-breakpoint: 1024px;
+$xlarge-2-breakpoint: 1167px;
+$xxlarge-breakpoint: 1310px;
+
+
+
+body {
+  font-family: $base-font-family;
+  margin: 0;
+  @media all and (min-width: $xlarge-2-breakpoint) {
+    margin: 0 auto;
+  }
+}
+
+
+.vmsw {
+
+  &__content-wrap{
+    margin: auto;
+    max-width: 1440px;
+  }
+
+  &__header{
+    -webkit-box-shadow: 0 1px 10px 0px $page-gray-light;
+    -moz-box-shadow: 0 1px 10px 0px $page-gray-light;
+    box-shadow: 0 1px 10px 0px $page-gray-light;
+
+    &__wrap {
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+      align-items: center;
+
+        @media all and (min-width: $xlarge-breakpoint) {
+          align-items: baseline;
+        }
+      }
+
+      &__logo{
+
+        &__wrapper {
+          //width: 40%;
+          display: inline-block;
+          text-align: left;
+          @media all and (min-width: $xlarge-breakpoint) {
+            //width: 60%;
+          }
+        }
+
+        &__img{
+          width: 100%;
+          height: 80px;
+          background: url('../images/logos/vmsw-logo.png');
+          overflow: hidden;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: left;
+
+          h1{
+            text-indent: -9999px;
+          }
+        }
+
+        &__headline {
+          font-size: 50px;
+          line-height: 1;
+          color: $text-black;
+          font-weight: 200;
+          margin:0;
+          padding-left: 5px;
+          letter-spacing: -7px;
+
+          @media all and (min-width: $xxsmall-breakpoint) {
+            font-size: 60px;
+          }
+
+          @media all and (min-width: $medium-breakpoint) {
+            font-size: 70px;
+          }
+
+          @media all and (min-width: $xlarge-breakpoint) {
+            font-size: 84px;
+          }
+
+          &--small{
+            display: none;
+            @media all and (min-width: $xlarge-breakpoint) {
+              display: inline-block;
+              font-size: 30px;
+              letter-spacing: -1px;
+              padding-left: 5px;
+            }
+          }
+        }
+
+      }
+
+
+      &__index{
+        display: inline-block;
+        //width:60%;
+
+        @media all and (min-width: $xlarge-breakpoint) {
+          //width:40%;
+        }
+
+        &-list{
+          text-align: right;
+          padding-inline-start: 0;
+        }
+
+        &-item {
+          display: block;
+          list-style: none;
+          padding: 0 5px 0 0px;
+
+          @media all and (min-width: $medium-breakpoint) {
+            padding: 0 15px;
+            display: inline-block;
+          }
+
+          &:last-of-type{
+            padding-right: 5px;
+          }
+
+
+
+          & a {
+            text-decoration: none;
+            color: $text-black;
+            border-bottom: 0px solid $page-yellow;
+
+
+            &:hover, &:focus {
+              border-bottom: 3px solid $page-yellow;
+              padding-bottom: 3px;
+              transition: border-bottom .15s ease-in-out;
+
+            }
+          }
+        }
+
+      }
+
+  }
+
+  &__text--bold{
+      font-weight: 500;
+  }
+
+  /*&__alert {
+    background: $page-blue-light;
+
+    &__text {
+      color: white;
+      font-size: 9.2px;
+      line-height: 11.1px;
+      letter-spacing: 0.5px;
+      padding: 10px 11px;
+      margin: 0;
+
+      @media all and (min-width: $medium-breakpoint) {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1.2px;
+        padding: 15px 10px;
+      }
+
+      @media all and (min-width: $xlarge-breakpoint) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @media all and (min-width: $xxlarge-breakpoint) {
+        font-size: 26px;
+        line-height: 31.2px;
+        letter-spacing: 2px;
+        padding: 23px 10px 20px;
+      }
+
+      &--highlight {
+        font-size: 12.7px;
+        @media all and (min-width: $large-breakpoint) {
+          font-size: 13px;
+          line-height: 20px;
+        }
+
+        @media all and (min-width: $xlarge-breakpoint) {
+          font-size: 26px;
+          line-height: 32px;
+        }
+
+        @media all and (min-width: $xxlarge-breakpoint) {
+          font-size: 33px;
+          line-height: 40.8px;
+        }
+      }
+    }
+
+    &__link {
+      // border-bottom: 1px solid rgba($text-white, 0.5);
+      color: white;
+      font-weight: bold;
+      text-decoration-color: rgba($text-white, 0.5);
+    }
+  }
+
+   */
+
+
+  /*&__slider {
+
+    &__slider-wrapper {
+      height: 100%;
+      width:100%;
+      position: relative;
+
+      &__image {
+        max-width: 100%;
+        width: 100%;
+        height: 350px;
+        max-height: 100%;
+        background-position: top;
+        background-size: cover;
+
+        @media all and (min-width: $xlarge-2-breakpoint) {
+          background-position: right top;
+          background-size: cover;
+          //height: 760px;
+          height: 30vw;
+        }
+
+      }
+
+      &__content-wrap {
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        //background: linear-gradient(to top, rgba(#2e4257, 0.9) 0%, rgba(transparent, 0) 100%);
+        background: linear-gradient(to bottom, rgba($text-black, 0.9) 0%, rgba(transparent, 0) 100%);
+        min-height: 100%;
+        text-shadow: 0px 1px 1px $text-dark;
+
+        &__content {
+
+          &__content-inner-wrap {
+            margin: 0 auto;
+            text-align: center;
+            word-break: break-word;
+            padding: 15px;
+            position: relative;
+
+            #slider-2 & {
+              bottom: 0;
+              padding: 0 20px;
+              @media all and (min-width: $large-breakpoint) {
+                padding:  15px 18px 5px 50px;
+              }
+            }
+
+            @media all and (min-width: $small-breakpoint) {
+              padding: 15px 50px;
+            }
+
+            @media all and (min-width: $medium-breakpoint) {
+              padding: 15px 100px;
+              bottom: 35px;
+            }
+
+            @media all and (min-width: $xlarge-2-breakpoint) {
+              padding: 23px 100px;
+              padding-left: 65px;
+              margin: 0;
+              text-align: left;
+              position: relative;
+              bottom: unset;
+            }
+
+            &__headline {
+              font-size: 32px;
+              color: $text-white;
+              padding: 0;
+              font-weight: 200;
+              margin: 20px 0 10px;
+              line-height: 33.4px;
+              letter-spacing: 0.3px;
+
+              @media all and (min-width: $medium-breakpoint) {
+                font-size: 42px;
+                line-height: 45px;
+                margin: 55px 0px 20px;
+              }
+
+              @media all and (min-width: $xlarge-2-breakpoint) {
+                padding-left: 50px;
+                font-size: 84px;
+                line-height: 79px;
+                margin: 55px 0px 25px;
+              }
+            }
+
+            &__tagline-wrapper {
+              //clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+             // background-color: rgba($page-yellow-darker, 0.6);
+              //min-width: 210px;
+              //max-width: 210px;
+              margin: 0 auto;
+
+             /* @media all and (min-width: $medium-breakpoint) {
+                min-width: 325px;
+                max-width: 500px;
+              }
+
+              @media all and (min-width: $xlarge-2-breakpoint) {
+                min-width: 525px;
+                max-width: 700px;
+                margin:0;
+              }
+
+
+
+              &__tagline {
+                font-size: 14px;
+                line-height: 17.4px;
+                font-weight: normal;
+                color: $page-yellow-darker;
+                margin: 0;
+                padding: 5px 18px;
+                font-style: italic;
+                letter-spacing: 0.7px;
+
+                @media all and (min-width: $medium-breakpoint) {
+                  padding: 15px 18px;
+                  font-size: 28px;
+                  line-height: 35.6px;
+                  display: inline-block;
+                  letter-spacing: 1px;
+                  font-weight: bold;
+                }
+
+                @media all and (min-width: $xlarge-2-breakpoint) {
+                  font-size: 38px;
+                  line-height: 45.6px;
+                  padding-left: 60px;
+
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+
+
+    }
+  }
+
+   */
+
+  &__video {
+
+    &__video-wrapper {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    &__video-player {
+      max-width: 100%;
+      width: 100%;
+      height: 350px;
+      max-height: 100%;
+      object-fit: cover;
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        //height: 760px;
+        height: 40vw;
+      }
+
+    }
+
+    &__content-wrap{
+
+        position: absolute;
+        bottom: 2px;
+        width: 100%;
+        //background: linear-gradient(to bottom, rgba(#2e4257, 0.9) 0%, rgba(transparent, 0) 100%);
+        background: linear-gradient(to right, rgba($text-black, 0.9) 0%, rgba(transparent, 0) 100%);
+        min-height: 100%;
+        text-shadow: 0px 1px 1px $text-dark;
+    }
+
+    &__content {
+        height: 350px;
+        min-height: 100%;
+    }
+
+    &__content-inner-wrap {
+      margin: 0 auto;
+      text-align: left;
+      word-break: break-word;
+      padding: 15px;
+      position: relative;
+      top:20%; //new positioning
+
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        padding-left: 30px;
+        margin: 0;
+        position: relative;
+        max-width: 600px;
+        top:33%; //new positioning
+      }
+    }
+
+    &__headline {
+      font-size: 32px;
+      color: $text-white;
+      padding: 0;
+      font-weight: 200;
+      margin: 20px 0 10px;
+      line-height: 33.4px;
+      letter-spacing: 0.3px;
+
+      @media all and (min-width: $medium-breakpoint) {
+        font-size: 42px;
+        line-height: 45px;
+        margin: 55px 0px 20px;
+      }
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        padding-left: 50px;
+        font-size: 84px;
+        line-height: 79px;
+        margin: 55px 0px 25px;
+      }
+    }
+
+    &__tagline {
+      font-size: 35px;
+      line-height: 1.5;
+      font-weight: 200;
+      color: $page-yellow-darker;
+      margin: 0;
+      font-style: italic;
+      letter-spacing: -2px;
+
+      @media all and (min-width: $medium-breakpoint) {
+        font-size: 45px;
+        font-weight: 400;
+      }
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        font-size: 64px;
+      }
+
+
+    }
+
+  }
+
+  &__main-text {
+    padding: 10px 30px;
+    margin-bottom: 12px;
+
+    @media all and (min-width: $small-breakpoint) {
+      padding: 30px 50px;
+    }
+
+    @media all and (min-width: $medium-breakpoint) {
+      padding: 35px 100px;
+    }
+
+
+    &__headline {
+      font-size: 23px;
+      line-height: 27.1px;
+      margin: 10px 0 6px;
+      letter-spacing: 0px;
+      font-weight: 400;
+      color: $text-dark;
+
+      @media all and (min-width: $large-breakpoint) {
+        font-size: 40px;
+        line-height: 50px;
+        margin:10px 0;
+        margin-bottom: 17px;
+      }
+
+      @media all and (min-width: $xxlarge-breakpoint) {
+        font-size: 52px;
+        line-height: 62.4px;
+        letter-spacing: 0.9px;
+        margin:15px 0;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 17px;
+      line-height: 27px;
+      letter-spacing: 0;
+      color: $text-dark;
+      font-weight: 200;
+
+      @media all and (min-width: $large-breakpoint) {
+        font-size: 28px;
+        line-height: 48px;
+      }
+
+      @media all and (min-width: $xxlarge-breakpoint) {
+        font-size: 38px;
+        line-height: 58.6px;
+      }
+
+    }
+
+
+  }
+
+  &__diagonal-two-columns {
+    display: block;
+
+    @media all and (min-width: $large-breakpoint) {
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      align-content: space-between;
+
+
+    }
+
+
+
+    &--yellow {
+      background: $page-yellow-light;
+    }
+
+    &--blue {
+      background: $page-blue;
+    }
+
+    &__content-wrapper {
+      padding: 30px 20px;
+      //height: 240px;
+      //padding:50px 25px 50px 75px;
+
+      @media all and (min-width: $medium-breakpoint) {
+        //height: 280px;
+      }
+
+      @media all and (min-width: $large-breakpoint) {
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 0;
+        //height: 360px;
+        padding: 50px 0px 30px 65px;
+
+      }
+
+
+      &--yellow {
+        background: $page-yellow;
+        background: -moz-linear-gradient(198deg, $page-yellow 30%, $page-gray-dark 30%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(198deg, $page-yellow 30%, $page-gray-dark 30%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(198deg, $page-yellow 30%, $page-gray-dark 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$page-yellow, endColorstr=$page-gray-dark, GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+        @media all and (min-width: $large-breakpoint) {
+          background: $page-yellow-light;
+          background: -moz-linear-gradient(198deg, $page-gray-dark 30%, $page-yellow-darker 30%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(198deg, $page-gray-dark 30%, $page-yellow-darker 30%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(198deg, $page-gray-dark 30%, $page-yellow-darker 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$page-gray-dark, endColorstr=$page-yellow-darker, GradientType=1); /* IE6-9 fallback on horizontal gradient */
+        }
+      }
+
+      &--dark {
+        background: $page-gray-dark;
+        background: -moz-linear-gradient(138deg, $page-gray-dark 42%, $page-yellow 42%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(138deg, $page-gray-dark 42%, $page-yellow 42%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(138deg, $page-gray-dark 42%, $page-yellow 42%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$page-yellow, endColorstr=$page-gray-dark, GradientType=1); /* IE6-9 fallback on horizontal gradient */
+        @media all and (min-width: $large-breakpoint) {
+          background: $page-gray-dark;
+          background: -moz-linear-gradient(-45deg, #475762 35%, #F0A500 35%); /* FF3.6-15 */
+          //background: -moz-linear-gradient(-121deg, $page-gray-dark 42%, $page-yellow 42%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(-45deg, #475762 35%, #F0A500 35%); /* Chrome10-25,Safari5.1-6 */
+          //background: -webkit-linear-gradient(-121deg, $page-gray-dark 42%, $page-yellow 42%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(-45deg, #475762 35%, #F0A500 35%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+         // background: linear-gradient(-121deg, $page-gray-dark 42%, $page-yellow 42%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$page-yellow, endColorstr=$page-gray-dark, GradientType=1); /* IE6-9 fallback on horizontal gradient */
+        }
+      }
+
+      &--left{
+        @media all and (min-width: $large-breakpoint) {
+          //clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+          clip-path: polygon(20% 0, 100% 0, 80% 100%, -10% 100%);
+          flex-basis: 68%;
+          width: 68%;
+        }
+      }
+
+      &--right{
+        @media all and (min-width: $large-breakpoint) {
+          //clip-path: polygon(0 0, 100% 0, 100% 100%, 43% 100%);
+          clip-path: polygon(15% 0%, 90% 0, 100% 100%, 0% 100%);
+          flex-basis: 69%;
+          width: 69%;
+        }
+      }
+    }
+
+    &__inner-content {
+      color: $text-white;
+      letter-spacing: 0;
+      text-align: center;
+
+
+      @media all and (min-width: $large-breakpoint) {
+        //padding-right: 50px;
+        padding-right: 90px;
+        //height: 360px;
+        text-align: left;
+      }
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        height: 100%;
+        display: block;
+        //max-width: 630px;
+        max-width: 600px;
+      }
+
+    }
+
+    &__image{
+      border-radius: 50%;
+      display: block;
+      height: 120px;
+      width: 120px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      left: 33%;
+
+      @media all and (min-width: $large-breakpoint) {
+        left: 25%;
+      }
+
+    }
+
+    &__headline {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 0;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      & a{
+        //color:$page-blue-lighter;
+        color:$text-white;
+        text-decoration: none;
+      }
+
+
+      @media all and (min-width: $large-breakpoint) {
+        font-size: 28px;
+      }
+
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        font-size: 35px;
+      }
+
+      @media all and (min-width: $xxlarge-breakpoint) {
+        font-size: 45px;
+        letter-spacing: -2px;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 13px;
+      line-height: 21px;
+      letter-spacing: -0.15px;
+      font-weight: 200;
+
+      @media all and (min-width: $large-breakpoint) {
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+
+      @media all and (min-width: $xlarge-breakpoint) {
+        font-size: 20px;
+        line-height: 30px;
+        //max-width: 350px;
+      }
+
+      &--bold{
+        font-weight: 500;
+      }
+
+
+      &--large {
+        font-size: 16.9px;
+        line-height: 23px;
+        letter-spacing: -0.3px;
+        margin-bottom: 10px;
+        color:$page-blue-lighter;
+        font-weight: 500;
+
+
+        @media all and (min-width: $large-breakpoint) {
+          color:$text-white;
+        }
+
+        @media all and (min-width: $xlarge-breakpoint) {
+          color:$page-blue;
+          font-size: 28px;
+          line-height: 37.6px;
+        }
+
+      }
+    }
+  }
+
+  &__footer {
+    //background: rgba($text-black,0.85);
+    padding: 20px;
+    box-shadow: 0 1px 10px 0px $page-gray-dark;
+
+
+    &-wrap{
+      display: block;
+      text-align: center;
+
+      @media all and (min-width: $small-breakpoint) {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        text-align: left;
+      }
+
+
+    }
+
+    &__info{
+
+    }
+    &__contact{
+
+      &__headline {
+        color: $page-yellow;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+
+        @media all and (min-width: $large-breakpoint) {
+          font-size: 26px;
+          line-height: 29.6px;
+          margin: 0;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          letter-spacing: 2.3px;
+        }
+
+      }
+
+      &__links {
+        & a{
+          color: $page-blue;
+          font-size: 14px;
+          display: block;
+          text-decoration: none;
+
+          &:hover{
+            color: $page-yellow;
+          }
+        }
+      }
+    }
+
+    &__logo__wrapper {
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+      margin-top: 30px;
+      @media all and (min-width: $small-breakpoint){
+        margin-top: 0px;
+      }
+
+      @media all and (min-width: $medium-breakpoint){
+        text-align: right;
+      }
+    }
+
+    &__logo {
+
+      &__img{
+        width: 100%;
+        max-width: 150px;
+
+        @media all and (min-width: $medium-breakpoint) {
+          max-width: 200px;
+
+        }
+
+      }
+
+      &__headline {
+        font-size: 50px;
+        line-height: 1;
+        color: $text-black;
+        font-weight: 200;
+        margin:0;
+        letter-spacing: -7px;
+        //text-align: center;
+
+
+        @media all and (min-width: $xxsmall-breakpoint) {
+          font-size: 60px;
+         // text-align: center;
+        }
+
+        @media all and (min-width: $medium-breakpoint) {
+          font-size: 70px;
+          //text-align: right;
+        }
+
+        @media all and (min-width: $xlarge-breakpoint) {
+          font-size: 84px;
+        }
+
+        &--small{
+          display: none;
+          @media all and (min-width: $xlarge-breakpoint) {
+            display: inline-block;
+            font-size: 30px;
+            letter-spacing: -1px;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    &__copyright {
+      font-size: 10px;
+      color: $text-black;
+      letter-spacing: -0.7px;
+
+      p{
+        margin:0;
+      }
+
+      @media all and (min-width: $small-breakpoint) {
+        text-align: right;
+      }
+
+
+      @media all and (min-width: $large-breakpoint) {
+        font-size: 14px;
+        line-height: 17.6px;
+        letter-spacing: 0.5px;
+      }
+/*
+      @media all and (min-width: $xlarge-breakpoint) {
+        font-size: 16px;
+        line-height: 19.6px;
+      }
+
+      @media all and (min-width: $xxlarge-breakpoint) {
+        font-size: 18px;
+        line-height: 21.6px;
+      }
+
+ */
+    }
+  }
+
+
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+
+  filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="g"><feColorMatrix type="matrix" values="0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0 0 0 1 0"/></filter></svg>#g');
+  -webkit-filter: grayscale(100%);
+  //-webkit-filter:  sepia(65%);
+  filter: grayscale(100%);
+  //filter: sepia(65%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+}
+
+
+#slider {
+  .tns-nav {
+    text-align: center;
+
+    @media all and (min-width:$large-breakpoint){
+      margin-top: 5px;
+    }
+
+    button {
+      border-radius: 50%;
+      padding: 4px 4px;
+      margin-left: 2px;
+      margin-right: 2px;
+      background-color: $text-black;
+      border: none;
+
+      @media all and (min-width:$large-breakpoint){
+        padding: 6px 6px;
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+
+      &:focus{
+        outline:none;
+      }
+
+
+      &.tns-nav-active {
+        background-color: $page-yellow-darker;
+      }
+    }
+
+  }
+
+  #tns1-ow > button {
+    display: none;
+  }
+}
+
+//Utility classes
+.uppercase {
+  text-transform: uppercase;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.inline {
+  display: inline;
+
+  &--desktop {
+
+    @media all and (min-width: $xlarge-2-breakpoint) {
+      display: inline;
+    }
+  }
+}
+
+.text-blue {
+  color: $page-blue;
+
+  &--light {
+    color: $page-blue-light;
+  }
+
+  &--lighter{
+    color: $page-blue-lighter
+  }
+}
+
+.text-yellow{
+  color: $page-yellow;
+
+  &--light{
+    color: $page-yellow-light;
+  }
+
+  &--darker{
+    color:$page-yellow-darker;
+  }
+}
+
+.divider {
+  width: 83%;
+  height: 1px;
+  margin: auto;
+  background: $page-gray;
+}
+
+.bold {
+  font-weight: bold;
+}
