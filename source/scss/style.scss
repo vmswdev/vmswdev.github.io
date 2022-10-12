@@ -179,8 +179,18 @@ body {
 
   }
 
-  &__text--bold{
+  &__text{
+    &--bold {
       font-weight: 500;
+    }
+
+    &--expand{
+      transition: font-size 2s linear 1s;
+
+      &:hover{
+        font-size:1em;
+      }
+    }
   }
 
   /*&__alert {
@@ -438,7 +448,7 @@ body {
       word-break: break-word;
       padding: 15px;
       position: relative;
-      top:20%; //new positioning
+      top:25%; //new positioning
 
 
       @media all and (min-width: $xlarge-2-breakpoint) {
@@ -484,7 +494,7 @@ body {
 
       @media all and (min-width: $medium-breakpoint) {
         font-size: 45px;
-        font-weight: 400;
+        font-weight: 300;
       }
 
       @media all and (min-width: $xlarge-2-breakpoint) {
@@ -685,8 +695,12 @@ body {
       position: relative;
       left: 33%;
 
+      @media all and (min-width: $medium-breakpoint) {
+        left: 40%;
+      }
+
       @media all and (min-width: $large-breakpoint) {
-        left: 25%;
+        left: 33%;
       }
 
     }
@@ -1032,4 +1046,33 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+#container {
+  text-align: center;
+}
+
+#text {
+  display: inline-block;
+  vertical-align: middle;
+  color: orange;
+  letter-spacing: 2px;
+}
+
+#cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 50px;
+  background-color: orange;
+  animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent
+  }
+  50% {
+    background-color: orange;
+  }
 }

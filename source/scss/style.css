@@ -325,6 +325,12 @@ body {
 .vmsw__text--bold {
   font-weight: 500;
 }
+.vmsw__text--expand {
+  transition: font-size 2s linear 1s;
+}
+.vmsw__text--expand:hover {
+  font-size: 1em;
+}
 .vmsw__video__video-wrapper {
   height: 100%;
   width: 100%;
@@ -360,7 +366,7 @@ body {
   word-break: break-word;
   padding: 15px;
   position: relative;
-  top: 20%;
+  top: 25%;
 }
 @media all and (min-width: 1167px) {
   .vmsw__video__content-inner-wrap {
@@ -407,7 +413,7 @@ body {
 @media all and (min-width: 600px) {
   .vmsw__video__tagline {
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 @media all and (min-width: 1167px) {
@@ -595,9 +601,14 @@ body {
   position: relative;
   left: 33%;
 }
+@media all and (min-width: 600px) {
+  .vmsw__diagonal-two-columns__image {
+    left: 40%;
+  }
+}
 @media all and (min-width: 768px) {
   .vmsw__diagonal-two-columns__image {
-    left: 25%;
+    left: 33%;
   }
 }
 .vmsw__diagonal-two-columns__headline {
@@ -894,6 +905,35 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+#container {
+  text-align: center;
+}
+
+#text {
+  display: inline-block;
+  vertical-align: middle;
+  color: orange;
+  letter-spacing: 2px;
+}
+
+#cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 50px;
+  background-color: orange;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: orange;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
