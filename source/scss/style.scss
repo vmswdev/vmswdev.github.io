@@ -60,11 +60,15 @@ body {
     box-shadow: 0 1px 10px 0px $page-gray-light;
 
     &__wrap {
-      padding: 15px 0;
+      padding: 10px 10px;
       display: flex;
       justify-content: space-between;
       align-content: space-between;
       align-items: center;
+
+        @media all and (min-width: $medium-breakpoint) {
+          padding: 15px 20px;
+        }
 
         @media all and (min-width: $xlarge-breakpoint) {
           align-items: baseline;
@@ -102,11 +106,11 @@ body {
           color: $text-black;
           font-weight: 200;
           margin:0;
-          padding-left: 5px;
+          //padding-left: 10px;
           letter-spacing: -7px;
 
           @media all and (min-width: $xxsmall-breakpoint) {
-            font-size: 60px;
+            font-size: 55px;
           }
 
           @media all and (min-width: $medium-breakpoint) {
@@ -147,7 +151,7 @@ body {
         &-item {
           display: block;
           list-style: none;
-          padding: 0 5px 0 0px;
+          padding: 0 5px 5px 0;
 
           @media all and (min-width: $medium-breakpoint) {
             padding: 0 15px;
@@ -155,7 +159,10 @@ body {
           }
 
           &:last-of-type{
-            padding-right: 5px;
+
+            @media all and (min-width: $medium-breakpoint) {
+              padding-right:0;
+            }
           }
 
 
@@ -168,8 +175,12 @@ body {
 
             &:hover, &:focus {
               border-bottom: 3px solid $page-yellow;
-              padding-bottom: 3px;
+              padding-bottom: 0;
               transition: border-bottom .15s ease-in-out;
+
+              @media all and (min-width: $medium-breakpoint) {
+                padding-bottom: 3px;
+              }
 
             }
           }
@@ -184,13 +195,14 @@ body {
       font-weight: 500;
     }
 
-    &--expand{
-      transition: font-size 2s linear 1s;
-
+   /* &--expand{
+      transition: font-size .4s ease-in-out;
       &:hover{
-        font-size:1em;
+        font-size:1.2em;
       }
     }
+
+    */
   }
 
   /*&__alert {
@@ -415,9 +427,13 @@ body {
     &__video-player {
       max-width: 100%;
       width: 100%;
-      height: 350px;
+      height: 300px;
       max-height: 100%;
       object-fit: cover;
+
+      @media all and (min-width: $medium-breakpoint) {
+        height: 350px;
+      }
 
       @media all and (min-width: $xlarge-2-breakpoint) {
         //height: 760px;
@@ -438,8 +454,12 @@ body {
     }
 
     &__content {
-        height: 350px;
+        height: 300px;
         min-height: 100%;
+
+      @media all and (min-width: $medium-breakpoint) {
+        height: 350px;
+      }
     }
 
     &__content-inner-wrap {
@@ -449,13 +469,13 @@ body {
       padding: 15px;
       position: relative;
       top:25%; //new positioning
+      max-width: 600px;
 
 
       @media all and (min-width: $xlarge-2-breakpoint) {
         padding-left: 30px;
         margin: 0;
         position: relative;
-        max-width: 600px;
         top:33%; //new positioning
       }
     }
@@ -484,17 +504,18 @@ body {
     }
 
     &__tagline {
-      font-size: 35px;
+      font-size: 32px;
       line-height: 1.5;
       font-weight: 200;
       color: $page-yellow-darker;
       margin: 0;
       font-style: italic;
-      letter-spacing: -2px;
+      letter-spacing: 0px;
 
       @media all and (min-width: $medium-breakpoint) {
         font-size: 45px;
         font-weight: 300;
+        letter-spacing: -2px;
       }
 
       @media all and (min-width: $xlarge-2-breakpoint) {
@@ -507,7 +528,7 @@ body {
   }
 
   &__main-text {
-    padding: 10px 30px;
+    padding: 10px 15px;
     margin-bottom: 12px;
 
     @media all and (min-width: $small-breakpoint) {
@@ -666,6 +687,8 @@ body {
       color: $text-white;
       letter-spacing: 0;
       text-align: center;
+      max-width: 600px;
+      margin: auto;
 
 
       @media all and (min-width: $large-breakpoint) {
@@ -786,8 +809,8 @@ body {
   &__footer {
     //background: rgba($text-black,0.85);
     padding: 20px;
-    box-shadow: 0 1px 10px 0px $page-gray-dark;
-
+    //Pending when map is back box-shadow: 0 1px 10px 0px $page-gray-dark;
+    box-shadow: 0 1px 3px 0px $page-gray-dark;
 
     &-wrap{
       display: block;
@@ -813,11 +836,11 @@ body {
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 0.7px;
+        margin: 0;
 
         @media all and (min-width: $large-breakpoint) {
           font-size: 26px;
           line-height: 29.6px;
-          margin: 0;
           margin-top: 10px;
           margin-bottom: 10px;
           letter-spacing: 2.3px;
@@ -896,7 +919,7 @@ body {
             display: inline-block;
             font-size: 30px;
             letter-spacing: -1px;
-            padding-left: 5px;
+            padding-left: 10px;
           }
         }
       }

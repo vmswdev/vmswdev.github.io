@@ -229,11 +229,16 @@ body {
   box-shadow: 0 1px 10px 0px #BBBBBE;
 }
 .vmsw__header__wrap {
-  padding: 15px 0;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-content: space-between;
   align-items: center;
+}
+@media all and (min-width: 600px) {
+  .vmsw__header__wrap {
+    padding: 15px 20px;
+  }
 }
 @media all and (min-width: 1024px) {
   .vmsw__header__wrap {
@@ -262,12 +267,11 @@ body {
   color: #000000;
   font-weight: 200;
   margin: 0;
-  padding-left: 5px;
   letter-spacing: -7px;
 }
 @media all and (min-width: 320px) {
   .vmsw__header__logo__headline {
-    font-size: 60px;
+    font-size: 55px;
   }
 }
 @media all and (min-width: 600px) {
@@ -301,7 +305,7 @@ body {
 .vmsw__header__index-item {
   display: block;
   list-style: none;
-  padding: 0 5px 0 0px;
+  padding: 0 5px 5px 0;
 }
 @media all and (min-width: 600px) {
   .vmsw__header__index-item {
@@ -309,8 +313,10 @@ body {
     display: inline-block;
   }
 }
-.vmsw__header__index-item:last-of-type {
-  padding-right: 5px;
+@media all and (min-width: 600px) {
+  .vmsw__header__index-item:last-of-type {
+    padding-right: 0;
+  }
 }
 .vmsw__header__index-item a {
   text-decoration: none;
@@ -319,17 +325,26 @@ body {
 }
 .vmsw__header__index-item a:hover, .vmsw__header__index-item a:focus {
   border-bottom: 3px solid #F0A500;
-  padding-bottom: 3px;
+  padding-bottom: 0;
   transition: border-bottom 0.15s ease-in-out;
+}
+@media all and (min-width: 600px) {
+  .vmsw__header__index-item a:hover, .vmsw__header__index-item a:focus {
+    padding-bottom: 3px;
+  }
+}
+.vmsw__text {
+  /* &--expand{
+     transition: font-size .4s ease-in-out;
+     &:hover{
+       font-size:1.2em;
+     }
+   }
+
+   */
 }
 .vmsw__text--bold {
   font-weight: 500;
-}
-.vmsw__text--expand {
-  transition: font-size 2s linear 1s;
-}
-.vmsw__text--expand:hover {
-  font-size: 1em;
 }
 .vmsw__video__video-wrapper {
   height: 100%;
@@ -339,9 +354,14 @@ body {
 .vmsw__video__video-player {
   max-width: 100%;
   width: 100%;
-  height: 350px;
+  height: 300px;
   max-height: 100%;
   object-fit: cover;
+}
+@media all and (min-width: 600px) {
+  .vmsw__video__video-player {
+    height: 350px;
+  }
 }
 @media all and (min-width: 1167px) {
   .vmsw__video__video-player {
@@ -357,8 +377,13 @@ body {
   text-shadow: 0px 1px 1px #1B1A17;
 }
 .vmsw__video__content {
-  height: 350px;
+  height: 300px;
   min-height: 100%;
+}
+@media all and (min-width: 600px) {
+  .vmsw__video__content {
+    height: 350px;
+  }
 }
 .vmsw__video__content-inner-wrap {
   margin: 0 auto;
@@ -367,13 +392,13 @@ body {
   padding: 15px;
   position: relative;
   top: 25%;
+  max-width: 600px;
 }
 @media all and (min-width: 1167px) {
   .vmsw__video__content-inner-wrap {
     padding-left: 30px;
     margin: 0;
     position: relative;
-    max-width: 600px;
     top: 33%;
   }
 }
@@ -402,18 +427,19 @@ body {
   }
 }
 .vmsw__video__tagline {
-  font-size: 35px;
+  font-size: 32px;
   line-height: 1.5;
   font-weight: 200;
   color: #c88f1c;
   margin: 0;
   font-style: italic;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
 }
 @media all and (min-width: 600px) {
   .vmsw__video__tagline {
     font-size: 45px;
     font-weight: 300;
+    letter-spacing: -2px;
   }
 }
 @media all and (min-width: 1167px) {
@@ -422,7 +448,7 @@ body {
   }
 }
 .vmsw__main-text {
-  padding: 10px 30px;
+  padding: 10px 15px;
   margin-bottom: 12px;
 }
 @media all and (min-width: 480px) {
@@ -576,6 +602,8 @@ body {
   color: #ffffff;
   letter-spacing: 0;
   text-align: center;
+  max-width: 600px;
+  margin: auto;
 }
 @media all and (min-width: 768px) {
   .vmsw__diagonal-two-columns__inner-content {
@@ -684,7 +712,7 @@ body {
 }
 .vmsw__footer {
   padding: 20px;
-  box-shadow: 0 1px 10px 0px #475762;
+  box-shadow: 0 1px 3px 0px #475762;
 }
 .vmsw__footer-wrap {
   display: block;
@@ -703,12 +731,12 @@ body {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.7px;
+  margin: 0;
 }
 @media all and (min-width: 768px) {
   .vmsw__footer__contact__headline {
     font-size: 26px;
     line-height: 29.6px;
-    margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     letter-spacing: 2.3px;
@@ -779,7 +807,7 @@ body {
     display: inline-block;
     font-size: 30px;
     letter-spacing: -1px;
-    padding-left: 5px;
+    padding-left: 10px;
   }
 }
 .vmsw__footer__copyright {
