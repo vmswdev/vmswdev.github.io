@@ -19,7 +19,7 @@ $page-blue-lighter: #1794b4;
 $text-dark: #1B1A17;
 $text-white: #ffffff;
 $text-black: #000000;
-$page-yellow:#F0A500;//FFE21F
+$page-yellow:#F1A504;//FFE21F
 $page-yellow-darker:#c88f1c;//FFEE74
 $page-yellow-light:#debc49;//ecd94f
 $page-green:#004d4d;
@@ -52,6 +52,16 @@ body {
   &__content-wrap{
     margin: auto;
     max-width: 1440px;
+    padding:10px 10px;
+
+    @media all and (min-width: $medium-breakpoint) {
+      padding: 15px 20px;
+    }
+
+    @media all and (min-width: $xlarge-breakpoint) {
+      padding: 0 50px;
+    }
+
   }
 
   &__header{
@@ -60,15 +70,10 @@ body {
     box-shadow: 0 1px 10px 0px $page-gray-light;
 
     &__wrap {
-      padding: 10px 10px;
       display: flex;
       justify-content: space-between;
       align-content: space-between;
       align-items: center;
-
-        @media all and (min-width: $medium-breakpoint) {
-          padding: 15px 20px;
-        }
 
         @media all and (min-width: $xlarge-breakpoint) {
           align-items: baseline;
@@ -205,217 +210,6 @@ body {
     */
   }
 
-  /*&__alert {
-    background: $page-blue-light;
-
-    &__text {
-      color: white;
-      font-size: 9.2px;
-      line-height: 11.1px;
-      letter-spacing: 0.5px;
-      padding: 10px 11px;
-      margin: 0;
-
-      @media all and (min-width: $medium-breakpoint) {
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 1.2px;
-        padding: 15px 10px;
-      }
-
-      @media all and (min-width: $xlarge-breakpoint) {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      @media all and (min-width: $xxlarge-breakpoint) {
-        font-size: 26px;
-        line-height: 31.2px;
-        letter-spacing: 2px;
-        padding: 23px 10px 20px;
-      }
-
-      &--highlight {
-        font-size: 12.7px;
-        @media all and (min-width: $large-breakpoint) {
-          font-size: 13px;
-          line-height: 20px;
-        }
-
-        @media all and (min-width: $xlarge-breakpoint) {
-          font-size: 26px;
-          line-height: 32px;
-        }
-
-        @media all and (min-width: $xxlarge-breakpoint) {
-          font-size: 33px;
-          line-height: 40.8px;
-        }
-      }
-    }
-
-    &__link {
-      // border-bottom: 1px solid rgba($text-white, 0.5);
-      color: white;
-      font-weight: bold;
-      text-decoration-color: rgba($text-white, 0.5);
-    }
-  }
-
-   */
-
-
-  /*&__slider {
-
-    &__slider-wrapper {
-      height: 100%;
-      width:100%;
-      position: relative;
-
-      &__image {
-        max-width: 100%;
-        width: 100%;
-        height: 350px;
-        max-height: 100%;
-        background-position: top;
-        background-size: cover;
-
-        @media all and (min-width: $xlarge-2-breakpoint) {
-          background-position: right top;
-          background-size: cover;
-          //height: 760px;
-          height: 30vw;
-        }
-
-      }
-
-      &__content-wrap {
-
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        //background: linear-gradient(to top, rgba(#2e4257, 0.9) 0%, rgba(transparent, 0) 100%);
-        background: linear-gradient(to bottom, rgba($text-black, 0.9) 0%, rgba(transparent, 0) 100%);
-        min-height: 100%;
-        text-shadow: 0px 1px 1px $text-dark;
-
-        &__content {
-
-          &__content-inner-wrap {
-            margin: 0 auto;
-            text-align: center;
-            word-break: break-word;
-            padding: 15px;
-            position: relative;
-
-            #slider-2 & {
-              bottom: 0;
-              padding: 0 20px;
-              @media all and (min-width: $large-breakpoint) {
-                padding:  15px 18px 5px 50px;
-              }
-            }
-
-            @media all and (min-width: $small-breakpoint) {
-              padding: 15px 50px;
-            }
-
-            @media all and (min-width: $medium-breakpoint) {
-              padding: 15px 100px;
-              bottom: 35px;
-            }
-
-            @media all and (min-width: $xlarge-2-breakpoint) {
-              padding: 23px 100px;
-              padding-left: 65px;
-              margin: 0;
-              text-align: left;
-              position: relative;
-              bottom: unset;
-            }
-
-            &__headline {
-              font-size: 32px;
-              color: $text-white;
-              padding: 0;
-              font-weight: 200;
-              margin: 20px 0 10px;
-              line-height: 33.4px;
-              letter-spacing: 0.3px;
-
-              @media all and (min-width: $medium-breakpoint) {
-                font-size: 42px;
-                line-height: 45px;
-                margin: 55px 0px 20px;
-              }
-
-              @media all and (min-width: $xlarge-2-breakpoint) {
-                padding-left: 50px;
-                font-size: 84px;
-                line-height: 79px;
-                margin: 55px 0px 25px;
-              }
-            }
-
-            &__tagline-wrapper {
-              //clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-             // background-color: rgba($page-yellow-darker, 0.6);
-              //min-width: 210px;
-              //max-width: 210px;
-              margin: 0 auto;
-
-             /* @media all and (min-width: $medium-breakpoint) {
-                min-width: 325px;
-                max-width: 500px;
-              }
-
-              @media all and (min-width: $xlarge-2-breakpoint) {
-                min-width: 525px;
-                max-width: 700px;
-                margin:0;
-              }
-
-
-
-              &__tagline {
-                font-size: 14px;
-                line-height: 17.4px;
-                font-weight: normal;
-                color: $page-yellow-darker;
-                margin: 0;
-                padding: 5px 18px;
-                font-style: italic;
-                letter-spacing: 0.7px;
-
-                @media all and (min-width: $medium-breakpoint) {
-                  padding: 15px 18px;
-                  font-size: 28px;
-                  line-height: 35.6px;
-                  display: inline-block;
-                  letter-spacing: 1px;
-                  font-weight: bold;
-                }
-
-                @media all and (min-width: $xlarge-2-breakpoint) {
-                  font-size: 38px;
-                  line-height: 45.6px;
-                  padding-left: 60px;
-
-                }
-              }
-            }
-          }
-        }
-
-
-      }
-
-
-    }
-  }
-
-   */
-
   &__video {
 
     &__video-wrapper {
@@ -454,6 +248,8 @@ body {
     }
 
     &__content {
+        padding-top:0;
+        padding-bottom:0;
         height: 300px;
         min-height: 100%;
 
@@ -463,7 +259,7 @@ body {
     }
 
     &__content-inner-wrap {
-      margin: 0 auto;
+      margin: 0;
       text-align: left;
       word-break: break-word;
       padding: 15px;
@@ -474,9 +270,8 @@ body {
 
       @media all and (min-width: $xlarge-2-breakpoint) {
         padding-left: 30px;
-        margin: 0;
         position: relative;
-        top:33%; //new positioning
+        top:40%; //new positioning
       }
     }
 
@@ -528,15 +323,21 @@ body {
   }
 
   &__main-text {
-    padding: 10px 15px;
+    //padding: 10px 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-bottom: 12px;
 
     @media all and (min-width: $small-breakpoint) {
-      padding: 30px 50px;
+      //padding: 30px 50px;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
 
     @media all and (min-width: $medium-breakpoint) {
-      padding: 35px 100px;
+      //padding: 35px 100px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
 
@@ -556,7 +357,7 @@ body {
       }
 
       @media all and (min-width: $xxlarge-breakpoint) {
-        font-size: 52px;
+        font-size: 50px;
         line-height: 62.4px;
         letter-spacing: 0.9px;
         margin:15px 0;
@@ -566,20 +367,20 @@ body {
 
     &__text {
       margin: 0;
-      font-size: 17px;
-      line-height: 27px;
+      font-size: 15px;
+      line-height: 24px;
       letter-spacing: 0;
       color: $text-dark;
       font-weight: 200;
 
       @media all and (min-width: $large-breakpoint) {
-        font-size: 28px;
-        line-height: 48px;
+        font-size: 22px;
+        line-height: 44px;
       }
 
       @media all and (min-width: $xxlarge-breakpoint) {
-        font-size: 38px;
-        line-height: 58.6px;
+        font-size: 32px;
+        line-height: 52px;
       }
 
     }
@@ -588,20 +389,6 @@ body {
   }
 
   &__diagonal-two-columns {
-    display: block;
-
-    @media all and (min-width: $large-breakpoint) {
-      display: flex;
-      height: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: stretch;
-      align-content: space-between;
-
-
-    }
-
-
 
     &--yellow {
       background: $page-yellow-light;
@@ -609,6 +396,23 @@ body {
 
     &--blue {
       background: $page-blue;
+    }
+
+    &-wrap{
+      display: block;
+
+      @media all and (min-width: $large-breakpoint) {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: space-between;
+
+
+      }
+
+
     }
 
     &__content-wrapper {
@@ -625,7 +429,6 @@ body {
         width: 100%;
         margin-bottom: 0;
         //height: 360px;
-        padding: 50px 0px 30px 65px;
 
       }
 
@@ -670,6 +473,7 @@ body {
           clip-path: polygon(20% 0, 100% 0, 80% 100%, -10% 100%);
           flex-basis: 68%;
           width: 68%;
+          padding: 50px 0px 50px 70px;
         }
       }
 
@@ -679,6 +483,8 @@ body {
           clip-path: polygon(15% 0%, 90% 0, 100% 100%, 0% 100%);
           flex-basis: 69%;
           width: 69%;
+          padding: 70px 0px 50px 50px;
+
         }
       }
     }
@@ -695,7 +501,7 @@ body {
         //padding-right: 50px;
         padding-right: 90px;
         //height: 360px;
-        text-align: left;
+        //text-align: left;
       }
 
       @media all and (min-width: $xlarge-2-breakpoint) {
@@ -712,25 +518,27 @@ body {
       display: block;
       height: 120px;
       width: 120px;
+      margin: auto;
+      margin-bottom: 10px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      position: relative;
-      left: 33%;
+      //position: relative;
+     // left: 33%;
 
       @media all and (min-width: $medium-breakpoint) {
-        left: 40%;
+        //left: 40%;
       }
 
       @media all and (min-width: $large-breakpoint) {
-        left: 33%;
+       // left: 33%;
       }
 
     }
 
     &__headline {
-      font-weight: 300;
-      font-size: 20px;
+      font-weight: 400;
+      font-size: 18px;
       line-height: 1.1;
       letter-spacing: -2px;
       margin: 0;
@@ -745,35 +553,35 @@ body {
 
 
       @media all and (min-width: $large-breakpoint) {
-        font-size: 28px;
+        font-size: 26px;
       }
 
 
       @media all and (min-width: $xlarge-2-breakpoint) {
-        font-size: 35px;
+        font-size: 32px;
       }
 
       @media all and (min-width: $xxlarge-breakpoint) {
-        font-size: 45px;
+        font-size: 40px;
         letter-spacing: -2px;
       }
     }
 
     &__text {
       margin: 0;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 21px;
       letter-spacing: -0.15px;
       font-weight: 200;
 
       @media all and (min-width: $large-breakpoint) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 25px;
       }
 
 
       @media all and (min-width: $xlarge-breakpoint) {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
         //max-width: 350px;
       }
@@ -806,23 +614,112 @@ body {
     }
   }
 
+  &__what{
+    &__container{
+      display: block;
+
+      @media all and (min-width: $medium-breakpoint) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+    }
+
+    &__item{
+      display: block;
+      height:300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      @media all and (min-width: $medium-breakpoint) {
+        flex-basis: 50%;
+        height: 300px;
+      }
+
+
+      @media all and (min-width: $xlarge-2-breakpoint) {
+        flex-basis: 25%;
+        height: 300px;
+      }
+
+    }
+
+    &__title{
+      text-align: center;
+      width: 100%;
+      padding: 5px 10px;
+
+      &--wrap{
+        display: flex;
+        align-items: center;
+        background-color: rgba($text-black, 0.6);
+        height: 100%;
+        width: 100%;
+        &:hover{
+          background-color:rgba($text-black, 0.25);
+        }
+      }
+
+      &__text{
+        //display: block;
+        color:$page-yellow;
+        font-weight: 500;
+        text-shadow: 2px 2px 3px $text-black;
+        font-size: 1.7rem; //30px;
+
+        @media all and (min-width: $medium-breakpoint) {
+          font-size: 1.2rem; //30px;
+        }
+
+        @media all and (min-width: $large-breakpoint) {
+          font-size: 1.7rem; //30px;
+        }
+        }
+    }
+
+    &__more{
+      font-size: 15px;
+      font-weight: 500;
+      color:$text-white;
+      display: block;
+      margin-top: 5px;
+    }
+
+    &__close{
+      display:block;
+      width:150px;
+      height:150px;
+      Background:red;
+    }
+
+    &__show{
+      display: block;
+    }
+
+  }
+
   &__footer {
-    //background: rgba($text-black,0.85);
     padding: 20px;
-    //Pending when map is back box-shadow: 0 1px 10px 0px $page-gray-dark;
-    box-shadow: 0 1px 3px 0px $page-gray-dark;
+    //box-shadow: 0 1px 3px 0px $page-gray-dark;
+    @media all and (min-width: $medium-breakpoint) {
+      padding:0;
+    }
 
     &-wrap{
       display: block;
       text-align: center;
+      //padding: 10px 20px;
 
-      @media all and (min-width: $small-breakpoint) {
+      @media all and (min-width: $medium-breakpoint) {
         display: flex;
         justify-content: space-between;
         align-content: center;
         text-align: left;
+        //padding: 0 50px;
       }
-
 
     }
 
@@ -867,12 +764,10 @@ body {
       margin-bottom: 10px;
       text-align: center;
       margin-top: 30px;
-      @media all and (min-width: $small-breakpoint){
-        margin-top: 0px;
-      }
 
       @media all and (min-width: $medium-breakpoint){
         text-align: right;
+        margin-top: 0px;
       }
     }
 
@@ -934,7 +829,7 @@ body {
         margin:0;
       }
 
-      @media all and (min-width: $small-breakpoint) {
+      @media all and (min-width: $medium-breakpoint) {
         text-align: right;
       }
 
@@ -977,46 +872,11 @@ body {
 }
 
 
-#slider {
-  .tns-nav {
-    text-align: center;
-
-    @media all and (min-width:$large-breakpoint){
-      margin-top: 5px;
-    }
-
-    button {
-      border-radius: 50%;
-      padding: 4px 4px;
-      margin-left: 2px;
-      margin-right: 2px;
-      background-color: $text-black;
-      border: none;
-
-      @media all and (min-width:$large-breakpoint){
-        padding: 6px 6px;
-        margin-left: 6px;
-        margin-right: 6px;
-      }
-
-      &:focus{
-        outline:none;
-      }
-
-
-      &.tns-nav-active {
-        background-color: $page-yellow-darker;
-      }
-    }
-
-  }
-
-  #tns1-ow > button {
-    display: none;
-  }
+//Utility classes
+.hide{
+  display: none;
 }
 
-//Utility classes
 .uppercase {
   text-transform: uppercase;
 }
