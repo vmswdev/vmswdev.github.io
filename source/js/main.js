@@ -1,4 +1,3 @@
-console.log("Hello!");
 
 var text = $('.typewriter').text();
 
@@ -21,6 +20,32 @@ var character = 0;
     }, 90);
 }());
 
+/*
+$('.vmsw__what__more').click(function(){
+    $('.vmsw__what__info').toggle('hide');
+    $('.vmsw__what__title').toggle('hide');
+});
+$('.vmsw__what__close').click(function(){
+    $('.vmsw__what__info').toggle('hide');
+    $('.vmsw__what__title').toggle('hide');
+});
+
+ */
+
+$(document).ready(function () {
+    var $main = $(".vmsw__what__item");
+    var $section = $(".vmsw__what__info").hide();
+
+    $(".vmsw__what__more").click(function (e) {
+        e.preventDefault();
+        $section.hide();
+        var target = $(this).data('target');
+        if(target){
+            $section.filter(target).show();
+        }
+    });
+
+});
 /*
 // List of sentences
 var _CONTENT = [
@@ -94,3 +119,4 @@ function Delete() {
 // Start the typing effect on load
 _INTERVAL_VAL = setInterval(Type, 100);
  */
+

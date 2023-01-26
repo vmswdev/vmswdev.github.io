@@ -616,6 +616,7 @@ body {
 
   &__what{
     &__container{
+      position: relative;
       display: block;
 
       @media all and (min-width: $medium-breakpoint) {
@@ -690,13 +691,27 @@ body {
 
     &__close{
       display:block;
-      width:150px;
-      height:150px;
-      Background:red;
+      position: absolute;
+      font-size: 20px;
+      top: 20px;
+      right: 20px;
     }
 
-    &__show{
-      display: block;
+
+    &__info{
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: white;
+      background-color: rgba($text-black, 0.6);
+      height: 100%;
+      width: 100%;
+      transition: height 2s;
+      transition: position 2s;
+
+      &__text{
+        padding: 20px;
+      }
     }
 
   }
