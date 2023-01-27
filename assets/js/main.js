@@ -24,31 +24,26 @@ var character = 0;
     }
   }, 90);
 })();
-/*
-$('.vmsw__what__more').click(function(){
-    $('.vmsw__what__info').toggle('hide');
-    $('.vmsw__what__title').toggle('hide');
+
+$('.vmsw__what__more').click(function () {
+  var target = $(this.parentElement).data('target');
+  console.log(target);
+  console.log(this.parentElement);
+
+  if (target) {
+    $('.vmsw__what__info').filter(target).toggle('hide');
+    $('.vmsw__what__title').filter(target).toggle('hide');
+  }
 });
-$('.vmsw__what__close').click(function(){
-    $('.vmsw__what__info').toggle('hide');
-    $('.vmsw__what__title').toggle('hide');
-});
+$('.vmsw__what__close').click(function () {
+  var target = $(this.parentElement).data('target');
+  console.log(target);
+  console.log(this.parentElement);
 
- */
-
-
-$(document).ready(function () {
-  var $main = $(".vmsw__what__item");
-  var $section = $(".vmsw__what__info").hide();
-  $(".vmsw__what__more").click(function (e) {
-    e.preventDefault();
-    $section.hide();
-    var target = $(this).data('target');
-
-    if (target) {
-      $section.filter(target).show();
-    }
-  });
+  if (target) {
+    $('.vmsw__what__info').filter(target).toggle('hide');
+    $('.vmsw__what__title').filter(target).toggle('hide');
+  }
 });
 /*
 // List of sentences

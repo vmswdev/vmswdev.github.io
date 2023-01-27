@@ -510,11 +510,13 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  position: relative;
 }
 @media all and (min-width: 600px) {
   .vmsw__what__item {
     flex-basis: 50%;
     height: 300px;
+    position: unset;
   }
 }
 @media all and (min-width: 1167px) {
@@ -531,6 +533,8 @@
 .vmsw__what__title--wrap {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
   width: 100%;
@@ -539,6 +543,7 @@
   background-color: rgba(0, 0, 0, 0.25);
 }
 .vmsw__what__title__text {
+  display: block;
   color: #F1A504;
   font-weight: 500;
   text-shadow: 2px 2px 3px #000000;
@@ -559,7 +564,6 @@
   font-weight: 500;
   color: #ffffff;
   display: block;
-  margin-top: 5px;
 }
 .vmsw__what__close {
   display: block;
@@ -573,22 +577,37 @@
   left: 0;
   top: 0;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
-  transition: height 2s;
-  transition: position 2s;
-}
-.vmsw__what__info__text {
-  padding: 20px;
-}
-.vmsw__footer {
-  padding: 20px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 @media all and (min-width: 600px) {
-  .vmsw__footer {
-    padding: 0;
+  .vmsw__what__info {
+    font-size: 20px;
   }
+}
+@media all and (min-width: 768px) {
+  .vmsw__what__info {
+    font-size: 24px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .vmsw__what__info {
+    font-size: 26px;
+  }
+}
+.vmsw__what__info__wrap {
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  .vmsw__what__info__wrap {
+    padding: 20px 40px;
+  }
+}
+.vmsw__footer {
+  padding: 20px 0;
 }
 .vmsw__footer-wrap {
   display: block;
