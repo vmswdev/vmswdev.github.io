@@ -760,7 +760,7 @@ body {
     &__contact{
 
       &__headline {
-        color: $page-yellow;
+        color: $page-yellow-darker;
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 0.7px;
@@ -851,14 +851,12 @@ body {
       }
     }
 
-    &__copyright {
+    &__copyright h6{
       font-size: 10px;
       color: $text-black;
       letter-spacing: -0.7px;
-
-      p{
-        margin:0;
-      }
+      margin:0;
+      font-weight: 400;
 
       @media all and (min-width: $medium-breakpoint) {
         text-align: right;
