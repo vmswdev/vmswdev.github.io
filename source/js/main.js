@@ -21,11 +21,11 @@ var character = 0;
 }());
 
 
-$('.vmsw__what__more').click(function(){
+$('.vmsw__what__title--wrap').click(function(){
 
-    var target = $(this.parentElement).data('target');
+    var target = $(this).data('target');
     console.log(target);
-    console.log(this.parentElement);
+    console.log(this);
 
     if(target){
         $('.vmsw__what__info').filter(target).toggle('hide');
@@ -33,11 +33,11 @@ $('.vmsw__what__more').click(function(){
     }
 
 });
-$('.vmsw__what__close').click(function(){
+$('.vmsw__what__info__wrap').click(function(){
 
-    var target = $(this.parentElement).data('target');
+    var target = $(this).data('target');
     console.log(target);
-    console.log(this.parentElement);
+    console.log(this);
 
     if(target){
         $('.vmsw__what__info').filter(target).toggle('hide');
