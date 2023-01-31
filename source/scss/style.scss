@@ -711,7 +711,7 @@ body {
       color: white;
       background-color: rgba($text-black, 0.7);
       height: 100%;
-      width: 100%;
+      width:100%;
       font-size: 14px;
       line-height: 1.5;
       @media all and (min-width: $medium-breakpoint) {
@@ -880,7 +880,10 @@ body {
 //Utility classes
 .hide{
   display: none;
+  transition: width 4s ease-in-out;
+
 }
+
 
 .uppercase {
   text-transform: uppercase;
