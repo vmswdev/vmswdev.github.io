@@ -622,6 +622,7 @@ body {
   margin-top: 10px;
 }
 .vmsw__what__info__wrap {
+  height: 100%;
   padding: 20px;
 }
 @media all and (min-width: 768px) {
@@ -655,16 +656,21 @@ body {
 .vmsw__footer__contact__headline {
   color: #1B1A17;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.7px;
-  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+@media all and (min-width: 480px) {
+  .vmsw__footer__contact__headline {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
 }
 @media all and (min-width: 768px) {
   .vmsw__footer__contact__headline {
     font-size: 26px;
     line-height: 29.6px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     letter-spacing: 2.3px;
   }
 }

@@ -742,6 +742,7 @@ body {
       }
 
       &__wrap{
+        height:100%;
         padding: 20px;
         @media all and (min-width: $large-breakpoint) {
           padding: 20px 40px;
@@ -783,15 +784,19 @@ body {
       &__headline {
         color: $text-dark;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: 0.7px;
-        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        @media all and (min-width: $small-breakpoint) {
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
 
         @media all and (min-width: $large-breakpoint) {
           font-size: 26px;
           line-height: 29.6px;
-          margin-top: 10px;
-          margin-bottom: 10px;
           letter-spacing: 2.3px;
         }
 

@@ -22,7 +22,7 @@ var character = 0;
     if (character == length) {
       clearTimeout(timeOut);
     }
-  }, 90);
+  }, 120);
 })();
 
 $('.vmsw__what__title--wrap').click(function () {
