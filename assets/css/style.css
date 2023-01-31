@@ -519,14 +519,12 @@
 @media all and (min-width: 600px) {
   .vmsw__what__item {
     flex-basis: 50%;
-    height: 300px;
     position: unset;
   }
 }
 @media all and (min-width: 1167px) {
   .vmsw__what__item {
     flex-basis: 25%;
-    height: 300px;
   }
 }
 .vmsw__what__title {
@@ -584,8 +582,13 @@
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
+}
+@media all and (min-width: 600px) {
+  .vmsw__what__info {
+    font-size: 14px;
+  }
 }
 @media all and (min-width: 600px) {
   .vmsw__what__info {
@@ -597,10 +600,19 @@
     font-size: 24px;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1310px) {
   .vmsw__what__info {
     font-size: 26px;
   }
+}
+.vmsw__what__info__title {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #F1A504;
+  font-weight: 400;
+}
+.vmsw__what__info__text {
+  margin-top: 10px;
 }
 .vmsw__what__info__wrap {
   padding: 20px;
@@ -651,12 +663,17 @@
 }
 .vmsw__footer__contact__links a {
   color: #005a80;
-  font-size: 14px;
+  font-size: 12px;
   display: block;
   text-decoration: none;
 }
 .vmsw__footer__contact__links a:hover {
   color: #F1A504;
+}
+@media all and (min-width: 320px) {
+  .vmsw__footer__contact__links a {
+    font-size: 14px;
+  }
 }
 .vmsw__footer__logo__wrapper {
   display: block;

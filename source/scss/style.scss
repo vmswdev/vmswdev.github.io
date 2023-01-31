@@ -641,14 +641,12 @@ body {
 
       @media all and (min-width: $medium-breakpoint) {
         flex-basis: 50%;
-        height: 300px;
         position: unset;
       }
 
 
       @media all and (min-width: $xlarge-2-breakpoint) {
         flex-basis: 25%;
-        height: 300px;
       }
 
     }
@@ -712,8 +710,13 @@ body {
       background-color: rgba($text-black, 0.7);
       height: 100%;
       width:100%;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 1.5;
+
+      @media all and (min-width: $medium-breakpoint) {
+        font-size: 14px;
+      }
+
       @media all and (min-width: $medium-breakpoint) {
         font-size: 20px;
       }
@@ -723,8 +726,19 @@ body {
       }
 
 
-      @media all and (min-width: $xlarge-breakpoint) {
+      @media all and (min-width: $xxlarge-breakpoint) {
         font-size: 26px;
+      }
+
+      &__title{
+        margin-bottom: 10px;
+        margin-top: 20px;
+        color:$page-yellow;
+        font-weight: 400;
+      }
+
+      &__text{
+        margin-top: 10px;
       }
 
       &__wrap{
@@ -786,12 +800,16 @@ body {
       &__links {
         & a{
           color: $page-blue;
-          font-size: 14px;
+          font-size: 12px;
           display: block;
           text-decoration: none;
 
           &:hover{
             color: $page-yellow;
+          }
+
+          @media all and (min-width: $xxsmall-breakpoint){
+            font-size: 14px;
           }
         }
       }
