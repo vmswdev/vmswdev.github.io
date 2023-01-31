@@ -628,6 +628,14 @@ body {
     text-align: left;
   }
 }
+.vmsw__footer__info {
+  text-align: center;
+}
+@media all and (min-width: 600px) {
+  .vmsw__footer__info {
+    text-align: right;
+  }
+}
 .vmsw__footer__contact__headline {
   color: #c88f1c;
   font-weight: 400;
@@ -656,22 +664,11 @@ body {
 .vmsw__footer__logo__wrapper {
   display: block;
   margin-bottom: 10px;
-  text-align: center;
   margin-top: 30px;
 }
 @media all and (min-width: 600px) {
   .vmsw__footer__logo__wrapper {
-    text-align: right;
     margin-top: 0px;
-  }
-}
-.vmsw__footer__logo__img {
-  width: 100%;
-  max-width: 150px;
-}
-@media all and (min-width: 600px) {
-  .vmsw__footer__logo__img {
-    max-width: 200px;
   }
 }
 .vmsw__footer__logo__headline {
@@ -708,32 +705,16 @@ body {
     padding-left: 10px;
   }
 }
-.vmsw__footer__copyright h6 {
+.vmsw__footer__copyright h6, .vmsw__footer__copyright span {
+  display: inline-block;
   font-size: 10px;
   color: #000000;
   letter-spacing: -0.7px;
   margin: 0;
   font-weight: 400;
-  /*
-        @media all and (min-width: $xlarge-breakpoint) {
-          font-size: 16px;
-          line-height: 19.6px;
-        }
-
-        @media all and (min-width: $xxlarge-breakpoint) {
-          font-size: 18px;
-          line-height: 21.6px;
-        }
-
-   */
-}
-@media all and (min-width: 600px) {
-  .vmsw__footer__copyright h6 {
-    text-align: right;
-  }
 }
 @media all and (min-width: 768px) {
-  .vmsw__footer__copyright h6 {
+  .vmsw__footer__copyright h6, .vmsw__footer__copyright span {
     font-size: 14px;
     line-height: 17.6px;
     letter-spacing: 0.5px;

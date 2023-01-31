@@ -755,6 +755,11 @@ body {
     }
 
     &__info{
+      text-align: center;
+
+      @media all and (min-width: $medium-breakpoint) {
+        text-align: right;
+      }
 
     }
     &__contact{
@@ -793,27 +798,14 @@ body {
     &__logo__wrapper {
       display: block;
       margin-bottom: 10px;
-      text-align: center;
       margin-top: 30px;
 
       @media all and (min-width: $medium-breakpoint){
-        text-align: right;
         margin-top: 0px;
       }
     }
 
     &__logo {
-
-      &__img{
-        width: 100%;
-        max-width: 150px;
-
-        @media all and (min-width: $medium-breakpoint) {
-          max-width: 200px;
-
-        }
-
-      }
 
       &__headline {
         font-size: 50px;
@@ -822,17 +814,14 @@ body {
         font-weight: 200;
         margin:0;
         letter-spacing: -7px;
-        //text-align: center;
 
 
         @media all and (min-width: $xxsmall-breakpoint) {
           font-size: 60px;
-         // text-align: center;
         }
 
         @media all and (min-width: $medium-breakpoint) {
           font-size: 70px;
-          //text-align: right;
         }
 
         @media all and (min-width: $xlarge-breakpoint) {
@@ -851,16 +840,13 @@ body {
       }
     }
 
-    &__copyright h6{
+    &__copyright h6,&__copyright span{
+      display: inline-block;
       font-size: 10px;
       color: $text-black;
       letter-spacing: -0.7px;
       margin:0;
       font-weight: 400;
-
-      @media all and (min-width: $medium-breakpoint) {
-        text-align: right;
-      }
 
 
       @media all and (min-width: $large-breakpoint) {
@@ -868,18 +854,6 @@ body {
         line-height: 17.6px;
         letter-spacing: 0.5px;
       }
-/*
-      @media all and (min-width: $xlarge-breakpoint) {
-        font-size: 16px;
-        line-height: 19.6px;
-      }
-
-      @media all and (min-width: $xxlarge-breakpoint) {
-        font-size: 18px;
-        line-height: 21.6px;
-      }
-
- */
     }
   }
 
