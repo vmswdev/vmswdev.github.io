@@ -17,15 +17,13 @@ var character = 0;
             clearTimeout(timeOut);
         }
 
-    }, 120);
+    }, 90);
 }());
 
-
+/*
 $('.vmsw__what__title--wrap').click(function(){
 
     var target = $(this).data('target');
-    console.log(target);
-    console.log(this);
 
     if(target){
         $('.vmsw__what__info').filter(target).toggle('hide');
@@ -36,8 +34,6 @@ $('.vmsw__what__title--wrap').click(function(){
 $('.vmsw__what__info__wrap').click(function(){
 
     var target = $(this).data('target');
-    console.log(target);
-    console.log(this);
 
     if(target){
         $('.vmsw__what__info').filter(target).toggle('hide');
@@ -45,6 +41,8 @@ $('.vmsw__what__info__wrap').click(function(){
     }
 });
 
+
+ */
 window.onload = function(){
     var date = new Date().getFullYear();
     document.getElementById("year").innerHTML = date;

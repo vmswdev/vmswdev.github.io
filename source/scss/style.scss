@@ -691,6 +691,55 @@ body {
       font-weight: 500;
       color:$text-white;
       display: block;
+
+      &:checked .vmsw__what__info{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        background-color: rgba($text-black, 0.7);
+        height: 100%;
+        width:100%;
+        font-size: 12px;
+        line-height: 1.5;
+
+        @media all and (min-width: $medium-breakpoint) {
+          font-size: 14px;
+        }
+
+        @media all and (min-width: $medium-breakpoint) {
+          font-size: 20px;
+        }
+
+        @media all and (min-width: $large-breakpoint) {
+          font-size: 24px;
+        }
+
+
+        @media all and (min-width: $xxlarge-breakpoint) {
+          font-size: 26px;
+        }
+
+        &__title{
+          margin-bottom: 10px;
+          margin-top: 20px;
+          color:$page-yellow;
+          font-weight: 400;
+        }
+
+        &__text{
+          margin-top: 10px;
+        }
+
+        &__wrap{
+          height:100%;
+          padding: 20px;
+          @media all and (min-width: $large-breakpoint) {
+            padding: 20px 40px;
+          }
+        }
+      }
+
     }
 
     &__close{
@@ -703,51 +752,9 @@ body {
 
 
     &__info{
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: white;
-      background-color: rgba($text-black, 0.7);
-      height: 100%;
-      width:100%;
-      font-size: 12px;
-      line-height: 1.5;
-
-      @media all and (min-width: $medium-breakpoint) {
-        font-size: 14px;
-      }
-
-      @media all and (min-width: $medium-breakpoint) {
-        font-size: 20px;
-      }
-
-      @media all and (min-width: $large-breakpoint) {
-        font-size: 24px;
-      }
+      display: none;
 
 
-      @media all and (min-width: $xxlarge-breakpoint) {
-        font-size: 26px;
-      }
-
-      &__title{
-        margin-bottom: 10px;
-        margin-top: 20px;
-        color:$page-yellow;
-        font-weight: 400;
-      }
-
-      &__text{
-        margin-top: 10px;
-      }
-
-      &__wrap{
-        height:100%;
-        padding: 20px;
-        @media all and (min-width: $large-breakpoint) {
-          padding: 20px 40px;
-        }
-      }
     }
 
   }
@@ -901,6 +908,17 @@ body {
 
 
 //Utility classes
+.screen-reader-only{
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px,1px,1px,1px);
+  clip-path: polygon(0 0,0 0,0 0);
+  -webkit-clip-path: polygon(0 0,0 0,0 0);
+  overflow: hidden;
+}
+
 .hide{
   display: none;
   transition: width 4s ease-in-out;
@@ -962,31 +980,8 @@ body {
   font-weight: bold;
 }
 
-#container {
-  text-align: center;
-}
+//Accessibility styling
 
-#text {
-  display: inline-block;
-  vertical-align: middle;
-  color: orange;
-  letter-spacing: 2px;
-}
-
-#cursor {
-  display: inline-block;
-  vertical-align: middle;
-  width: 3px;
-  height: 50px;
-  background-color: orange;
-  animation: blink .75s step-end infinite;
-}
-
-@keyframes blink {
-  from, to {
-    background-color: transparent
-  }
-  50% {
-    background-color: orange;
-  }
+a:-webkit-any-link:focus-visible {
+  outline: $page-yellow-darker auto 1px;
 }
