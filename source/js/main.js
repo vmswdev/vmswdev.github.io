@@ -20,7 +20,7 @@ var character = 0;
     }, 90);
 }());
 
-/*
+
 $('.vmsw__what__title--wrap').click(function(){
 
     var target = $(this).data('target');
@@ -42,7 +42,6 @@ $('.vmsw__what__info__wrap').click(function(){
 });
 
 
- */
 window.onload = function(){
     var date = new Date().getFullYear();
     document.getElementById("year").innerHTML = date;

@@ -24,30 +24,23 @@ var character = 0;
     }
   }, 90);
 })();
-/*
-$('.vmsw__what__title--wrap').click(function(){
 
-    var target = $(this).data('target');
+$('.vmsw__what__title--wrap').click(function () {
+  var target = $(this).data('target');
 
-    if(target){
-        $('.vmsw__what__info').filter(target).toggle('hide');
-        $('.vmsw__what__title').filter(target).toggle('hide');
-    }
-
+  if (target) {
+    $('.vmsw__what__info').filter(target).toggle('hide');
+    $('.vmsw__what__title').filter(target).toggle('hide');
+  }
 });
-$('.vmsw__what__info__wrap').click(function(){
+$('.vmsw__what__info__wrap').click(function () {
+  var target = $(this).data('target');
 
-    var target = $(this).data('target');
-
-    if(target){
-        $('.vmsw__what__info').filter(target).toggle('hide');
-        $('.vmsw__what__title').filter(target).toggle('hide');
-    }
+  if (target) {
+    $('.vmsw__what__info').filter(target).toggle('hide');
+    $('.vmsw__what__title').filter(target).toggle('hide');
+  }
 });
-
-
- */
-
 
 window.onload = function () {
   var date = new Date().getFullYear();
@@ -80,4 +73,4 @@ module.exports = __webpack_require__(/*! /Users/amowhi/Sites/vmsw.test/source/sc
 
 /***/ })
 
-},[[0,"/js/manifest","/js/vendor"]]]);
+},[[0,"/js/manifest"]]]);

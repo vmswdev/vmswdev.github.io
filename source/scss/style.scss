@@ -691,55 +691,6 @@ body {
       font-weight: 500;
       color:$text-white;
       display: block;
-
-      &:checked .vmsw__what__info{
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: white;
-        background-color: rgba($text-black, 0.7);
-        height: 100%;
-        width:100%;
-        font-size: 12px;
-        line-height: 1.5;
-
-        @media all and (min-width: $medium-breakpoint) {
-          font-size: 14px;
-        }
-
-        @media all and (min-width: $medium-breakpoint) {
-          font-size: 20px;
-        }
-
-        @media all and (min-width: $large-breakpoint) {
-          font-size: 24px;
-        }
-
-
-        @media all and (min-width: $xxlarge-breakpoint) {
-          font-size: 26px;
-        }
-
-        &__title{
-          margin-bottom: 10px;
-          margin-top: 20px;
-          color:$page-yellow;
-          font-weight: 400;
-        }
-
-        &__text{
-          margin-top: 10px;
-        }
-
-        &__wrap{
-          height:100%;
-          padding: 20px;
-          @media all and (min-width: $large-breakpoint) {
-            padding: 20px 40px;
-          }
-        }
-      }
-
     }
 
     &__close{
@@ -752,9 +703,51 @@ body {
 
 
     &__info{
-      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: white;
+      background-color: rgba($text-black, 0.7);
+      height: 100%;
+      width:100%;
+      font-size: 12px;
+      line-height: 1.5;
+
+      @media all and (min-width: $medium-breakpoint) {
+        font-size: 14px;
+      }
+
+      @media all and (min-width: $medium-breakpoint) {
+        font-size: 20px;
+      }
+
+      @media all and (min-width: $large-breakpoint) {
+        font-size: 24px;
+      }
 
 
+      @media all and (min-width: $xxlarge-breakpoint) {
+        font-size: 26px;
+      }
+
+      &__title{
+        margin-bottom: 10px;
+        margin-top: 20px;
+        color:$page-yellow;
+        font-weight: 400;
+      }
+
+      &__text{
+        margin-top: 10px;
+      }
+
+      &__wrap{
+        height:100%;
+        padding: 20px;
+        @media all and (min-width: $large-breakpoint) {
+          padding: 20px 40px;
+        }
+      }
     }
 
   }
@@ -872,7 +865,7 @@ body {
       }
     }
 
-    &__copyright h6,&__copyright span{
+    &__copyright h3,&__copyright span{
       display: inline-block;
       font-size: 10px;
       color: $text-black;
