@@ -832,6 +832,17 @@ body {
 
     &__logo {
 
+      &__img{
+        width: 100%;
+        max-width: 150px;
+
+        @media all and (min-width: $medium-breakpoint) {
+          max-width: 300px;
+
+        }
+
+      }
+
       &__headline {
         font-size: 50px;
         line-height: 1;

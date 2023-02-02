@@ -691,6 +691,15 @@
     margin-top: 0px;
   }
 }
+.vmsw__footer__logo__img {
+  width: 100%;
+  max-width: 150px;
+}
+@media all and (min-width: 600px) {
+  .vmsw__footer__logo__img {
+    max-width: 300px;
+  }
+}
 .vmsw__footer__logo__headline {
   font-size: 50px;
   line-height: 1;
