@@ -73,4 +73,4 @@ module.exports = __webpack_require__(/*! /Users/amowhi/Sites/vmsw.test/source/sc
 
 /***/ })
 
-},[[0,"/js/manifest"]]]);
+},[[0,"/js/manifest","/js/vendor"]]]);
