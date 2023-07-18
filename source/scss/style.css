@@ -21,7 +21,7 @@ body {
 }
 @media all and (min-width: 1024px) {
   .vmsw__content-wrap {
-    padding: 0 50px;
+    padding: 10px 50px;
   }
 }
 .vmsw__header {
@@ -37,7 +37,7 @@ body {
 }
 @media all and (min-width: 1024px) {
   .vmsw__header__wrap {
-    align-items: baseline;
+    align-items: flex-end;
   }
 }
 .vmsw__header__logo__wrapper {
@@ -195,7 +195,7 @@ body {
   .vmsw__video__content-inner-wrap {
     padding-left: 30px;
     position: relative;
-    top: 40%;
+    top: 55%;
   }
 }
 .vmsw__video__headline {
@@ -586,7 +586,7 @@ body {
   left: 0;
   top: 0;
   color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100%;
   width: 100%;
   font-size: 12px;
@@ -698,6 +698,15 @@ body {
     margin-top: 0px;
   }
 }
+.vmsw__footer__logo__img {
+  width: 100%;
+  max-width: 150px;
+}
+@media all and (min-width: 600px) {
+  .vmsw__footer__logo__img {
+    max-width: 300px;
+  }
+}
 .vmsw__footer__logo__headline {
   font-size: 50px;
   line-height: 1;
@@ -732,7 +741,7 @@ body {
     padding-left: 10px;
   }
 }
-.vmsw__footer__copyright h6, .vmsw__footer__copyright span {
+.vmsw__footer__copyright h3, .vmsw__footer__copyright span {
   display: inline-block;
   font-size: 10px;
   color: #000000;
@@ -741,7 +750,7 @@ body {
   font-weight: 400;
 }
 @media all and (min-width: 768px) {
-  .vmsw__footer__copyright h6, .vmsw__footer__copyright span {
+  .vmsw__footer__copyright h3, .vmsw__footer__copyright span {
     font-size: 14px;
     line-height: 17.6px;
     letter-spacing: 0.5px;
@@ -772,7 +781,6 @@ body {
 
 .hide {
   display: none;
-  transition: width 4s ease-in-out;
 }
 
 .uppercase {
@@ -823,33 +831,8 @@ body {
   font-weight: bold;
 }
 
-#container {
-  text-align: center;
-}
-
-#text {
-  display: inline-block;
-  vertical-align: middle;
-  color: orange;
-  letter-spacing: 2px;
-}
-
-#cursor {
-  display: inline-block;
-  vertical-align: middle;
-  width: 3px;
-  height: 50px;
-  background-color: orange;
-  animation: blink 0.75s step-end infinite;
-}
-
-@keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: orange;
-  }
+a:-webkit-any-link:focus-visible {
+  outline: #c88f1c auto 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

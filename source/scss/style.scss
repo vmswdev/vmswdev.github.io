@@ -59,7 +59,7 @@ body {
     }
 
     @media all and (min-width: $xlarge-breakpoint) {
-      padding: 0 50px;
+      padding: 10px 50px;
     }
 
   }
@@ -76,7 +76,7 @@ body {
       align-items: center;
 
         @media all and (min-width: $xlarge-breakpoint) {
-          align-items: baseline;
+          align-items: flex-end;
         }
       }
 
@@ -271,7 +271,7 @@ body {
       @media all and (min-width: $xlarge-2-breakpoint) {
         padding-left: 30px;
         position: relative;
-        top:40%; //new positioning
+        top:55%; //new positioning
       }
     }
 
@@ -316,7 +316,6 @@ body {
       @media all and (min-width: $xlarge-2-breakpoint) {
         font-size: 64px;
       }
-
 
     }
 
@@ -707,7 +706,7 @@ body {
       left: 0;
       top: 0;
       color: white;
-      background-color: rgba($text-black, 0.7);
+      background-color: rgba($text-black, 0.8);
       height: 100%;
       width:100%;
       font-size: 12px;
